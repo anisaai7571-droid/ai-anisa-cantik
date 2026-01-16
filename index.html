@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Anisa Cantik</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .chat-box {
+            background: white;
+            width: 320px;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        #chat {
+            background: #f1f1f1;
+            border-radius: 10px;
+            padding: 10px;
+            height: 120px;
+            overflow-y: auto;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-bottom: 8px;
+        }
+        button {
+            width: 100%;
+            padding: 8px;
+            border: none;
+            border-radius: 8px;
+            background: #6c63ff;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #574fd6;
+        }
+    </style>
+</head>
+<body>
+
+<div class="chat-box">
+    <h2>AI Anisa 🤍</h2>
+    <div id="chat">
+        <div>Anisa: Halo! Aku Anisa 😊</div>
+    </div>
+    <input id="userInput" placeholder="Ketik pesan..." />
+    <button onclick="send()">Kirim</button>
+</div>
+
+<script>
+    function send() {
+        const input = document.getElementById("userInput");
+        const chat = document.getElementById("chat");
+
+        if (input.value.trim() === "") return;
+
+        chat.innerHTML += `<div><b>Kamu:</b> ${input.value}</div>`;
+        chat.innerHTML += `<div><b>Anisa:</b> Aku dengar kamu 🤍</div>`;
+
+        input.value = "";
+        chat.scrollTop = chat.scrollHeight;
+    }
+</script>
+
+</body>
+</html>
